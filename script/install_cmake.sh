@@ -11,9 +11,12 @@
 version=3.17
 build=3
 
-if [ $UID -eq "0" ]; then
-    SUDO=""
-    echo "[no sudo for root]"
+#
+# Check if the script run as root
+#
+if [ "$EUID" -ne 0 ] ; then
+    echo -e "ERROR: Please run as root the script."
+    exit 1;
 fi
 
 mkdir tmp
