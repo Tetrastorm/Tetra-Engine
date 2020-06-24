@@ -24,4 +24,4 @@ cd cmake-$version.$build/
 
 ./bootstrap
 make -j$(nproc)
-sudo make install
+make install
