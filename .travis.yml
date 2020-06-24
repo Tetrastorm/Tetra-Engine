@@ -1,18 +1,24 @@
 language: cpp
 
-jobs:
-  include:
-    - os: linux
-      addons:
-        apt:
-          packages:
-            - gcc-6
-            - g++-6
-            - valgrind
-            - gcovr
-            - clang-3.9
-          sources:
-            - ubuntu-toolchain-r-test
+os:
+  - linux
+
+compiler:
+  - gcc
+  - clang
+
+dist: bionic
+
+addons:
+  apt:
+    packages:
+      - gcc-6
+      - g++-6
+      - valgrind
+      - gcovr
+      - clang-3.9
+    sources:
+      - ubuntu-toolchain-r-test
 
 install:
   #start code inspired from https://riptutorial.com/cmake/example/4723/configure-travis-ci-with-newest-cmake
