@@ -16,7 +16,7 @@ matrix:
             - ubuntu-toolchain-r-test
 
 install:
-  - ./script/install_cmake.sh
+  - sudo ./script/install_cmake.sh
   - ./script/install_criterion.sh
 
 script:
