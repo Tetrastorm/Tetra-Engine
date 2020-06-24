@@ -12,7 +12,7 @@ matrix:
             - valgrind
             - gcovr
             - clang-3.9
-            - cmake
+            - cmake-3.17.3
           sources:
             - ubuntu-toolchain-r-test
 
@@ -22,7 +22,7 @@ install:
 script:
   - cmake .
   - cmake --build .
-  - Tetra-Engine-Testing
+  - ./Tetra-Engine-Testing
 
 notifications:
 email: false
