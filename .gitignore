@@ -1,0 +1,15 @@
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+.idea/
+
+*.gc*
+*.o
+
+*~
+
+Tetra-Engine
+Tetra-Engine-Testing
