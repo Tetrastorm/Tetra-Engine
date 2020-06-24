@@ -1,5 +1,4 @@
 language: cpp
-sudo: required
 
 jobs:
   include:
@@ -16,7 +15,7 @@ jobs:
             - ubuntu-toolchain-r-test
 
 install:
-  #start code from https://riptutorial.com/cmake/example/4723/configure-travis-ci-with-newest-cmake
+  #start code inspired from https://riptutorial.com/cmake/example/4723/configure-travis-ci-with-newest-cmake
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
   - travis_retry wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3.tar.gz
@@ -36,4 +35,4 @@ script:
   - ./Tetra-Engine-Testing
 
 notifications:
-email: false
+  email: false
