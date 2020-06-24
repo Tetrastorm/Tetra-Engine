@@ -1,0 +1,28 @@
+language: cpp
+sudo: required
+
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          packages:
+            - gcc-6
+            - g++-6
+            - valgrind
+            - gcovr
+            - clang-3.9
+            - cmake
+          sources:
+            - ubuntu-toolchain-r-test
+
+install:
+  - ./script/install_criterion.sh
+
+script:
+  - cmake .
+  - cmake --build .
+  - Tetra-Engine-Testing
+
+notifications:
+email: false
