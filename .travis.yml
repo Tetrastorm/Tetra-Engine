@@ -12,11 +12,11 @@ matrix:
             - valgrind
             - gcovr
             - clang-3.9
-            - cmake-3.17.3
           sources:
             - ubuntu-toolchain-r-test
 
 install:
+  - ./script/install_cmake.sh
   - ./script/install_criterion.sh
 
 script:
